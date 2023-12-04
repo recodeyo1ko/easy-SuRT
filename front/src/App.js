@@ -1,23 +1,57 @@
-import logo from "./logo.svg";
 import "./App.css";
+import { useState, useEffect } from "react";
+import Grid from "./components/Grid";
+import Score from "./components/Score";
 
 function App() {
+  const [circleScore, setCircleScore] = useState(0); // 通常のマルのスコア
+  const [largeCircleScore, setLargeCircleScore] = useState(0); // 大きいマルのスコア
+  const [circlePositions, setCirclePositions] = useState([]);
+  const [largeCircleIndex, setLargeCircleIndex] = useState(null);
+
+  const updateScore = (isLargeCircle) => {
+    if (isLargeCircle) {
+      setLargeCircleScore(largeCircleScore + 1);
+    } else {
+      setCircleScore(circleScore + 1);
+    }
+
+    generateGrid();
+  };
+
+  const generateGrid = () => {
+    const totalCells = 60;
+    const numberOfCircles = Math.floor(Math.random() * (30 - 15 + 1)) + 15;
+    let newCirclePositions = [];
+    for (let i = 0; i < totalCells; i++) {
+      if (newCirclePositions.length < numberOfCircles) {
+        if (Math.random() < numberOfCircles / totalCells) {
+          newCirclePositions.push(i);
+        }
+      }
+    }
+    setCirclePositions(newCirclePositions);
+    setLargeCircleIndex(
+      newCirclePositions[Math.floor(Math.random() * newCirclePositions.length)]
+    );
+  };
+
+  useEffect(() => {
+    generateGrid();
+  }, []);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Grid
+        circlePositions={circlePositions}
+        largeCircleIndex={largeCircleIndex}
+        updateScore={updateScore}
+      />
+      <Score
+        circleScore={circleScore}
+        largeCircleScore={largeCircleScore}
+        generateGrid={generateGrid}
+      />
     </div>
   );
 }
