@@ -34,9 +34,19 @@ html {
   align-items: center;
 }
 
+/* 奇数行のセルに適用するスタイル */
+.grid .cell:nth-child(12n + 1),
+.grid .cell:nth-child(12n + 2),
+.grid .cell:nth-child(12n + 3),
+.grid .cell:nth-child(12n + 4),
+.grid .cell:nth-child(12n + 5),
+.grid .cell:nth-child(12n + 6) {
+  margin-left: -25px;
+}
+
 .circle {
-  width: 40px; /* マルのサイズ */
-  height: 40px;
+  width: 41px; /* マルのサイズ */
+  height: 41px;
   border: 2px solid white;
   border-radius: 50%; /* 円形にする */
   display: flex;
@@ -45,8 +55,8 @@ html {
 }
 
 .circle-large {
-  width: 45px; /* 特別な大きなマルのサイズ */
-  height: 45px;
+  width: 44px; /* 特別な大きなマルのサイズ */
+  height: 44px;
   border: 2px solid white;
   border-radius: 50%; /* 円形にする */
   display: flex;
