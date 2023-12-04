@@ -20,8 +20,8 @@ function App() {
   };
 
   const generateGrid = () => {
-    const totalCells = 60;
-    const numberOfCircles = Math.floor(Math.random() * (25 - 15 + 1)) + 15;
+    const totalCells = 98;
+    const numberOfCircles = Math.floor(Math.random() * (30 - 15 + 1)) + 20;
     let newCirclePositions = [];
     for (let i = 0; i < totalCells; i++) {
       if (newCirclePositions.length < numberOfCircles) {

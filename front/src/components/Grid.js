@@ -7,7 +7,7 @@ const Grid = ({ circlePositions, largeCircleIndex, updateScore }) => {
   return (
     <div className="grid-main">
       <div className="grid">
-        {[...Array(60)].map((_, index) => (
+        {[...Array(98)].map((_, index) => (
           <div key={index} className="cell">
             {circlePositions.includes(index) && (
               <div
