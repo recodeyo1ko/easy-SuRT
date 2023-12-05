@@ -1,0 +1,66 @@
+body,
+html {
+  margin-top: 1%;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  color: white;
+}
+
+.grid-main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80%; /* グリッドエリアの高さ */
+}
+.score {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 20%; /* ボタンエリアの高さ */
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(7, 0.5fr);
+}
+.cell {
+  width: 43px;
+  height: 43px;
+  /* border: 1px solid black; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 奇数行のセルに適用するスタイル */
+.grid .cell:nth-child(14n + 1),
+.grid .cell:nth-child(14n + 2),
+.grid .cell:nth-child(14n + 3),
+.grid .cell:nth-child(14n + 4),
+.grid .cell:nth-child(14n + 5),
+.grid .cell:nth-child(14n + 6),
+.grid .cell:nth-child(14n + 7) {
+  margin-left: -20px;
+}
+
+.circle {
+  width: 34px; /* マルのサイズ */
+  height: 34px;
+  border: 2px solid white;
+  border-radius: 50%; /* 円形にする */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.circle-large {
+  width: 40px; /* 大きなマルのサイズ */
+  height: 40px;
+  border: 2px solid white;
+  border-radius: 50%; /* 円形にする */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
