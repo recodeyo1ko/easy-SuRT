@@ -17,7 +17,7 @@ const Grid: React.FC<GridProps> = ({
   return (
     <div className="grid-main">
       <div className="grid">
-        {[...Array(98)].map((_, index) => (
+        {[...Array(91)].map((_, index) => (
           <div key={index} className="cell">
             {circlePositions.includes(index) && (
               <div
