@@ -1,15 +1,15 @@
 import "./App.css";
-import { useState, useEffect } from "react";
 import Grid from "./components/Grid";
+import { useState, useEffect } from "react";
 import Score from "./components/Score";
 
 function App() {
   const [circleScore, setCircleScore] = useState(0); // 通常のマルのスコア
   const [largeCircleScore, setLargeCircleScore] = useState(0); // 大きいマルのスコア
-  const [circlePositions, setCirclePositions] = useState([]);
-  const [largeCircleIndex, setLargeCircleIndex] = useState(null);
+  const [circlePositions, setCirclePositions] = useState<number[]>([]);
+  const [largeCircleIndex, setLargeCircleIndex] = useState<number | null>(null);
 
-  const updateScore = (isLargeCircle) => {
+  const updateScore = (isLargeCircle: boolean) => {
     if (isLargeCircle) {
       setLargeCircleScore(largeCircleScore + 1);
     } else {
@@ -20,8 +20,8 @@ function App() {
   };
 
   const generateGrid = () => {
-    const totalCells = 98;
-    const numberOfCircles = Math.floor(Math.random() * (30 - 15 + 1)) + 20;
+    const totalCells = 91;
+    const numberOfCircles = Math.floor(Math.random() * (30 - 15 + 1)) + 15;
     let newCirclePositions = [];
     for (let i = 0; i < totalCells; i++) {
       if (newCirclePositions.length < numberOfCircles) {
@@ -47,11 +47,7 @@ function App() {
         largeCircleIndex={largeCircleIndex}
         updateScore={updateScore}
       />
-      <Score
-        circleScore={circleScore}
-        largeCircleScore={largeCircleScore}
-        generateGrid={generateGrid}
-      />
+      <Score circleScore={circleScore} largeCircleScore={largeCircleScore} />
     </div>
   );
 }

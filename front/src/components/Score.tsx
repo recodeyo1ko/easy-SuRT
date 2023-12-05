@@ -1,9 +1,13 @@
 import React from "react";
 
-const Score = ({ circleScore, largeCircleScore, generateGrid }) => {
+interface ScoreProps {
+  circleScore: number;
+  largeCircleScore: number;
+}
+
+const Score: React.FC<ScoreProps> = ({ circleScore, largeCircleScore }) => {
   return (
     <div className="score">
-      {/* <button onClick={generateGrid}>グリッドを更新</button> */}
       <p>
         通常のマルのスコア: <span>{circleScore}</span>
       </p>

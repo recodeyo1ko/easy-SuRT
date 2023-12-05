@@ -1,6 +1,8 @@
 # かんたん SuRT
 
-SuRT(Surrogate Reference Task)を簡単に実施できるアプリケーションです。
+- SuRT(Surrogate Reference Task)を簡単に実施できるアプリケーション
+- 画面の中から
+- 画面サイズは iphone12mini を想定
 
 ## 使用技術
 
@@ -15,7 +17,9 @@ SuRT(Surrogate Reference Task)を簡単に実施できるアプリケーショ�
 ### local
 
 - `npm install`
+- `npm start`
 
 ### docker
 
-- `npm install` in container
+- `docker-compose run front npm install`
+- `docker-compose up -`
