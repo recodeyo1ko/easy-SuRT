@@ -1,66 +1,38 @@
-body,
-html {
-  margin-top: 1%;
-  padding: 0;
-  width: 100%;
-  height: 100%;
-  background-color: black;
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
   color: white;
 }
 
-.grid-main {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 80%; /* グリッドエリアの高さ */
-}
-.score {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 20%; /* ボタンエリアの高さ */
+.App-link {
+  color: #61dafb;
 }
 
-.grid {
-  display: grid;
-  grid-template-columns: repeat(7, 0.5fr);
-}
-.cell {
-  width: 43px;
-  height: 43px;
-  /* border: 1px solid black; */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-/* 奇数行のセルに適用するスタイル */
-.grid .cell:nth-child(14n + 1),
-.grid .cell:nth-child(14n + 2),
-.grid .cell:nth-child(14n + 3),
-.grid .cell:nth-child(14n + 4),
-.grid .cell:nth-child(14n + 5),
-.grid .cell:nth-child(14n + 6),
-.grid .cell:nth-child(14n + 7) {
-  margin-left: -20px;
-}
-
-.circle {
-  width: 34px; /* マルのサイズ */
-  height: 34px;
-  border: 2px solid white;
-  border-radius: 50%; /* 円形にする */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.circle-large {
-  width: 40px; /* 大きなマルのサイズ */
-  height: 40px;
-  border: 2px solid white;
-  border-radius: 50%; /* 円形にする */
-  display: flex;
-  justify-content: center;
-  align-items: center;
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
