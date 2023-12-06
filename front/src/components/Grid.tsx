@@ -15,22 +15,20 @@ const Grid: React.FC<GridProps> = ({
     return <div>Loading...</div>;
   }
   return (
-    <div className="grid-container">
-      <div className="grid-main">
-        <div className="grid">
-          {[...Array(105)].map((_, index) => (
-            <div key={index} className="cell">
-              {circlePositions.includes(index) && (
-                <div
-                  className={`${
-                    index === largeCircleIndex ? "circle-large" : "circle"
-                  }`}
-                  onClick={() => updateScore(index === largeCircleIndex)}
-                ></div>
-              )}
-            </div>
-          ))}
-        </div>
+    <div className="grid-main">
+      <div className="grid">
+        {[...Array(105)].map((_, index) => (
+          <div key={index} className="cell">
+            {circlePositions.includes(index) && (
+              <div
+                className={`${
+                  index === largeCircleIndex ? "circle-large" : "circle"
+                }`}
+                onClick={() => updateScore(index === largeCircleIndex)}
+              ></div>
+            )}
+          </div>
+        ))}
       </div>
     </div>
   );
