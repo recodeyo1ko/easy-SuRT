@@ -9,7 +9,14 @@ html {
   overflow: hidden;
 }
 
+.grid-container {
+  margin: 0 auto;
+  width: 94%;
+  border: 1px solid white;
+}
+
 .grid-main {
+  margin: 2%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -25,6 +32,7 @@ html {
 .grid {
   display: grid;
   grid-template-columns: repeat(7, 0.5fr);
+  margin-left: 20px;
 }
 .cell {
   width: 43px;

@@ -20,7 +20,7 @@ function App() {
   };
 
   const generateGrid = () => {
-    const totalCells = 91;
+    const totalCells = 105;
     const numberOfCircles = Math.floor(Math.random() * (30 - 15 + 1)) + 15;
     let newCirclePositions = [];
     for (let i = 0; i < totalCells; i++) {
@@ -42,12 +42,12 @@ function App() {
 
   return (
     <div className="App">
+      <Score circleScore={circleScore} largeCircleScore={largeCircleScore} />
       <Grid
         circlePositions={circlePositions}
         largeCircleIndex={largeCircleIndex}
         updateScore={updateScore}
       />
-      <Score circleScore={circleScore} largeCircleScore={largeCircleScore} />
     </div>
   );
 }
