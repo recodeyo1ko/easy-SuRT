@@ -6,7 +6,6 @@
 
 ## 使用方法
 
-- iphon
 - https://easy-su-rt.vercel.app/ にアクセス
 - 「ホーム画面に追加」を選択後、ホーム画面から起動
 
