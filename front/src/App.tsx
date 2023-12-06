@@ -1,9 +1,10 @@
 import "./App.css";
 import Grid from "./components/Grid";
 import { useState, useEffect } from "react";
-import Score from "./components/Score";
+import Menu from "./components/Menu";
 
 function App() {
+  const [isHambergerMenuOpen, setIsHambergerMenuOpen] = useState(false);
   const [circleScore, setCircleScore] = useState(0); // 通常のマルのスコア
   const [largeCircleScore, setLargeCircleScore] = useState(0); // 大きいマルのスコア
   const [circlePositions, setCirclePositions] = useState<number[]>([]);
@@ -20,7 +21,7 @@ function App() {
   };
 
   const generateGrid = () => {
-    const totalCells = 91;
+    const totalCells = 105;
     const numberOfCircles = Math.floor(Math.random() * (30 - 15 + 1)) + 15;
     let newCirclePositions = [];
     for (let i = 0; i < totalCells; i++) {
@@ -40,14 +41,28 @@ function App() {
     generateGrid();
   }, []);
 
+  const resetScore = () => {
+    setCircleScore(0);
+    setLargeCircleScore(0);
+  };
+
   return (
     <div className="App">
-      <Grid
-        circlePositions={circlePositions}
-        largeCircleIndex={largeCircleIndex}
-        updateScore={updateScore}
-      />
-      <Score circleScore={circleScore} largeCircleScore={largeCircleScore} />
+      <div className="container">
+        <Menu
+          isHambergerMenuOpen={isHambergerMenuOpen}
+          openHambergerMenu={() => setIsHambergerMenuOpen(true)}
+          closeHambergerMenu={() => setIsHambergerMenuOpen(false)}
+          circleScore={circleScore}
+          largeCircleScore={largeCircleScore}
+          resetScore={resetScore}
+        />
+        <Grid
+          circlePositions={circlePositions}
+          largeCircleIndex={largeCircleIndex}
+          updateScore={updateScore}
+        />
+      </div>
     </div>
   );
 }

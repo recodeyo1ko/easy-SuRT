@@ -1,3 +1,12 @@
+button {
+  padding: 0;
+  border: none;
+  outline: none;
+  font: inherit;
+  color: inherit;
+  background: none;
+}
+
 body,
 html {
   margin-top: 1%;
@@ -9,22 +18,42 @@ html {
   overflow: hidden;
 }
 
+.container {
+  margin: 0 auto;
+  width: 94%;
+}
+
 .grid-main {
+  margin-top: 2%;
+  padding: 2%;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 80%; /* グリッドエリアの高さ */
+  border: 1px solid white;
 }
 .score {
-  display: flex;
   justify-content: center;
   align-items: center;
   height: 20%; /* ボタンエリアの高さ */
 }
 
+.score-body {
+  display: flex;
+  align-items: center;
+  margin-top: 1%;
+  margin-bottom: 1%;
+}
+
+.score-body-button {
+  border: 1px solid white;
+  padding: 2%;
+}
+
 .grid {
   display: grid;
   grid-template-columns: repeat(7, 0.5fr);
+  margin-left: 20px;
 }
 .cell {
   width: 43px;
@@ -64,4 +93,23 @@ html {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.hamburger-menu {
+  background-color: rgb(70, 70, 70);
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
+
+.menu-content {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title {
+  font-size: 20px;
+  font-weight: bold;
 }
