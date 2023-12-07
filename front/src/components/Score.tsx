@@ -1,6 +1,5 @@
 import React from "react";
 import RestartAltIcon from "@mui/icons-material/RestartAlt";
-import { IconButton } from "@mui/material";
 import Brightness1OutlinedIcon from "@mui/icons-material/Brightness1Outlined";
 
 interface ScoreProps {
