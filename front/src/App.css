@@ -36,7 +36,7 @@ html {
 
 .grid-main {
   margin: 2% auto;
-  padding: 3%;
+  padding: 5%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -94,8 +94,6 @@ html {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: gray;
-  border: 1px solid white;
 }
 
 /* 奇数行のセルに適用するスタイル */
@@ -133,7 +131,7 @@ html {
 }
 
 /* ipad pro 11inch Gen1 */
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 800px) {
   .grid-main {
     height: 85%;
     width: 85%;
@@ -187,7 +185,7 @@ html {
 }
 
 /* iphone12 mini */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 800px) {
   .grid-main {
     height: 85%;
     width: 90%;
