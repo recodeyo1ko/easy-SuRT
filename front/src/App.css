@@ -185,7 +185,7 @@ html {
 }
 
 /* iphone12 mini */
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 600px) {
   .grid-main {
     height: 85%;
     width: 90%;
@@ -245,5 +245,61 @@ html {
     width: 39px;
     height: 39px;
     border: 2px solid white;
+  }
+}
+
+/* android shv39 */
+@media screen and (max-width: 450px) and (max-height: 720px) {
+  .grid {
+    grid-template-columns: repeat(8, 0.5fr);
+    margin-left: 22px;
+  }
+
+  /* 奇数行のセルに適用するスタイルをリセット */
+  .grid .cell:nth-child(20n + 1),
+  .grid .cell:nth-child(20n + 2),
+  .grid .cell:nth-child(20n + 3),
+  .grid .cell:nth-child(20n + 4),
+  .grid .cell:nth-child(20n + 5),
+  .grid .cell:nth-child(20n + 6),
+  .grid .cell:nth-child(20n + 7),
+  .grid .cell:nth-child(20n + 8),
+  .grid .cell:nth-child(20n + 9) {
+    margin-left: 0px;
+  }
+
+  /* 奇数行のセルに適用するスタイルをリセット */
+  .grid .cell:nth-child(18n + 1),
+  .grid .cell:nth-child(18n + 2),
+  .grid .cell:nth-child(18n + 3),
+  .grid .cell:nth-child(18n + 4),
+  .grid .cell:nth-child(18n + 5),
+  .grid .cell:nth-child(18n + 6),
+  .grid .cell:nth-child(18n + 7),
+  .grid .cell:nth-child(18n + 8),
+  .grid .cell:nth-child(18n + 9) {
+    margin-left: 0px;
+  }
+  /* 奇数行のセルに適用するスタイルをリセット */
+  .grid .cell:nth-child(14n + 1),
+  .grid .cell:nth-child(14n + 2),
+  .grid .cell:nth-child(14n + 3),
+  .grid .cell:nth-child(14n + 4),
+  .grid .cell:nth-child(14n + 5),
+  .grid .cell:nth-child(14n + 6),
+  .grid .cell:nth-child(14n + 7) {
+    margin-left: 0px;
+  }
+
+  /* 奇数行のセルに適用するスタイル */
+  .grid .cell:nth-child(16n + 1),
+  .grid .cell:nth-child(16n + 2),
+  .grid .cell:nth-child(16n + 3),
+  .grid .cell:nth-child(16n + 4),
+  .grid .cell:nth-child(16n + 5),
+  .grid .cell:nth-child(16n + 6),
+  .grid .cell:nth-child(16n + 7),
+  .grid .cell:nth-child(16n + 8) {
+    margin-left: -22px;
   }
 }
