@@ -35,3 +35,4 @@
 
 - ウィンドウの幅に応じてセルの個数を決定する
   > Math.floor(window.innerWidth / 100);
+- CSSをよりスマートに
