@@ -1,18 +1,4 @@
-#root {
-  width: 100%;
-  height: 100%;
-}
-
-.App {
-  width: 100%;
-  height: 100%;
-}
-
 button {
-  padding: 0;
-  border: none;
-  outline: none;
-  font: inherit;
   color: inherit;
   background: none;
 }
@@ -40,7 +26,7 @@ html {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 85%; /* グリッドエリアの高さ */
+  height: 85%;
   width: 85%;
   border: 2px solid white;
 }
@@ -90,31 +76,16 @@ html {
 .cell {
   width: 72px;
   height: 72px;
-  /* border: 1px solid black; */
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-/* 奇数行のセルに適用するスタイル */
-.grid .cell:nth-child(20n + 1),
-.grid .cell:nth-child(20n + 2),
-.grid .cell:nth-child(20n + 3),
-.grid .cell:nth-child(20n + 4),
-.grid .cell:nth-child(20n + 5),
-.grid .cell:nth-child(20n + 6),
-.grid .cell:nth-child(20n + 7),
-.grid .cell:nth-child(20n + 8),
-.grid .cell:nth-child(20n + 9),
-.grid .cell:nth-child(20n + 10) {
-  margin-left: -40px;
 }
 
 .circle {
   width: 50px; /* マルのサイズ */
   height: 50px;
   border: 3px solid white;
-  border-radius: 50%; /* 円形にする */
+  border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -124,7 +95,7 @@ html {
   width: 60px; /* 大きなマルのサイズ */
   height: 60px;
   border: 3px solid white;
-  border-radius: 50%; /* 円形にする */
+  border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -145,21 +116,6 @@ html {
     width: 72px;
     height: 72px;
   }
-
-  /* 奇数行のセルに適用するスタイルをリセット */
-  .grid .cell:nth-child(20n + 1),
-  .grid .cell:nth-child(20n + 2),
-  .grid .cell:nth-child(20n + 3),
-  .grid .cell:nth-child(20n + 4),
-  .grid .cell:nth-child(20n + 5),
-  .grid .cell:nth-child(20n + 6),
-  .grid .cell:nth-child(20n + 7),
-  .grid .cell:nth-child(20n + 8),
-  .grid .cell:nth-child(20n + 9),
-  .grid .cell:nth-child(20n + 10) {
-    margin-left: 0px;
-  }
-
   /* 奇数行のセルに適用するスタイル */
   .grid .cell:nth-child(18n + 1),
   .grid .cell:nth-child(18n + 2),
@@ -171,16 +127,6 @@ html {
   .grid .cell:nth-child(18n + 8),
   .grid .cell:nth-child(18n + 9) {
     margin-left: -36px;
-  }
-
-  .circle {
-    width: 50px;
-    height: 50px;
-  }
-
-  .circle-large {
-    width: 60px;
-    height: 60px;
   }
 }
 
@@ -197,19 +143,6 @@ html {
   .cell {
     width: 43px;
     height: 43px;
-  }
-
-  /* 奇数行のセルに適用するスタイルをリセット */
-  .grid .cell:nth-child(20n + 1),
-  .grid .cell:nth-child(20n + 2),
-  .grid .cell:nth-child(20n + 3),
-  .grid .cell:nth-child(20n + 4),
-  .grid .cell:nth-child(20n + 5),
-  .grid .cell:nth-child(20n + 6),
-  .grid .cell:nth-child(20n + 7),
-  .grid .cell:nth-child(20n + 8),
-  .grid .cell:nth-child(20n + 9) {
-    margin-left: 0px;
   }
 
   /* 奇数行のセルに適用するスタイルをリセット */
@@ -253,19 +186,6 @@ html {
   .grid {
     grid-template-columns: repeat(8, 0.5fr);
     margin-left: 22px;
-  }
-
-  /* 奇数行のセルに適用するスタイルをリセット */
-  .grid .cell:nth-child(20n + 1),
-  .grid .cell:nth-child(20n + 2),
-  .grid .cell:nth-child(20n + 3),
-  .grid .cell:nth-child(20n + 4),
-  .grid .cell:nth-child(20n + 5),
-  .grid .cell:nth-child(20n + 6),
-  .grid .cell:nth-child(20n + 7),
-  .grid .cell:nth-child(20n + 8),
-  .grid .cell:nth-child(20n + 9) {
-    margin-left: 0px;
   }
 
   /* 奇数行のセルに適用するスタイルをリセット */
